@@ -9,6 +9,7 @@ function sendTG() {
 }
 
 ssh_keys() {
+  echo "**MaestroCI Flashable Vendor Extractor**"
   mkdir -p /home/ci/.ssh
   curl -sL -u baalajimaestro:$GH_PERSONAL_TOKEN -o /home/ci/.ssh/id_ed25519 https://raw.githubusercontent.com/baalajimaestro/keys/master/id_ed25519
   chmod 600 ~/.ssh/id_ed25519
@@ -20,7 +21,7 @@ build_env() {
     cd ~
     sendTG "\`Vendor Extraction Job Rolled!\`"
     git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py
-    cd xiaomi-flashable-firmware-creator/
+    cd xiaomi-flashable-firmware-creator.py/xiaomi-flashable-firmware-creator/
 }
 
 push_flashable_zip()
