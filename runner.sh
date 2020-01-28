@@ -32,7 +32,11 @@ push_flashable_zip()
   python3 create_flashable_firmware.py -V rom.zip
   if [ "$1" == "davinci" ]; then
     mv fw-vendor* "fw-vendor_davinci-$2-$(cat /tmp/version).zip"
-  else
+  elif [ "$1" == "davinciin" ]; then
+    mv fw-vendor* "fw-vendor_davinciin-$2-$(cat /tmp/version).zip"
+  elif [ "$1" == "raphaelin" ]; then
+    mv fw-vendor* "fw-vendor_raphaelin-$2-$(cat /tmp/version).zip"
+  elif [ "$1" == "raphael" ]; then
     mv fw-vendor* "fw-vendor_raphael-$2-$(cat /tmp/version).zip"
   fi
   if [ "$1" == "davinci" ]; then
@@ -47,42 +51,34 @@ push_flashable_zip()
 
 davinci()
 {
-   sendTG "\`Extracting Vendor for Davinci EEA!\`"
    python3 get_rom.py davinci EA
    push_flashable_zip davinci EA
-   sendTG "\`Extracting Vendor for Davinci CN!\`"
    python3 get_rom.py davinci CN
    push_flashable_zip davinci CN
-   sendTG "\`Extracting Vendor for Davinci EEA!\`"
    python3 get_rom.py davinci GB
    push_flashable_zip davinci GB
 }
 
 davinciin()
 {
-  sendTG "\`Extracting Vendor for Davinci IN!\`"
-  python3 get_rom.py davinciin
+  python3 get_rom.py davinciin IN
   push_flashable_zip davinciin IN
 }
 
 raphael()
 {
-  sendTG "\`Extracting Vendor for Raphael EEA!\`"
   python3 get_rom.py raphael EA
   push_flashable_zip raphael EA
-  sendTG "\`Extracting Vendor for Raphael CN!\`"
   python3 get_rom.py raphael CN
   push_flashable_zip raphael CN
-  sendTG "\`Extracting Vendor for Raphael GB!\`"
   python3 get_rom.py raphael GB
   push_flashable_zip raphael GB
 }
 
 raphaelin()
 {
-  sendTG "\`Extracting Vendor for Raphael IN!\`"
-  python3 get_rom.py raphaelin
-  create_flashable_zip raphaelin IN
+  python3 get_rom.py raphaelin IN
+  push_flashable_zip raphaelin IN
 }
 
 ssh_keys

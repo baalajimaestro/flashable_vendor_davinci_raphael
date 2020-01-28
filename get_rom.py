@@ -10,6 +10,8 @@ if edition == "EA":
    array_index = 3
 elif edition == "GB":
     array_index = 0
+elif edition =="IN":
+    array_index =0
 
 with open(yaml_name, 'wb') as load:
     load.write(get("https://raw.githubusercontent.com/XiaomiFirmwareUpdater/xiaomifirmwareupdater.github.io/master/data/devices/latest/"+yaml_name).content)
