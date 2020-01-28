@@ -10,5 +10,6 @@ USER ci
 
 WORKdIR /app
 COPY runner.sh /app
+COPY get_rom.py /app
 
 CMD bash runner.sh | ts '[%Y-%m-%d %H:%M:%S]'

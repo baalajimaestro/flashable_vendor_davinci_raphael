@@ -21,7 +21,7 @@ build_env() {
     cd ~
     sendTG "\`Vendor Extraction Job Rolled!\`"
     git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py
-    mv get_rom.py xiaomi-flashable-firmware-creator.py/xiaomi_flashable_firmware_creator/
+    mv /app/get_rom.py xiaomi-flashable-firmware-creator.py/xiaomi_flashable_firmware_creator/
     cd xiaomi-flashable-firmware-creator.py/xiaomi_flashable_firmware_creator/
 }
 
