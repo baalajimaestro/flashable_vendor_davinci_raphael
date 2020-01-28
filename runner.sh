@@ -20,6 +20,8 @@ ssh_keys() {
 build_env() {
     cd ~
     sendTG "\`Vendor Extraction Job Rolled!\`"
+    sudo apt install python3 python3-pip -y &> /dev/null
+    sudo pip3 install requests pyYaml  &> /dev/null
     git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py
     mv /app/get_rom.py xiaomi-flashable-firmware-creator.py/xiaomi_flashable_firmware_creator/
     cd xiaomi-flashable-firmware-creator.py/xiaomi_flashable_firmware_creator/
