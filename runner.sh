@@ -21,7 +21,8 @@ build_env() {
     cd ~
     sendTG "\`Vendor Extraction Job Rolled!\`"
     git clone https://github.com/XiaomiFirmwareUpdater/xiaomi-flashable-firmware-creator.py
-    cd xiaomi-flashable-firmware-creator.py/xiaomi-flashable-firmware-creator/
+    mv get_rom.py xiaomi-flashable-firmware-creator.py/xiaomi_flashable_firmware_creator/
+    cd xiaomi-flashable-firmware-creator.py/xiaomi_flashable_firmware_creator/
 }
 
 push_flashable_zip()
@@ -83,3 +84,4 @@ davinci
 davinciin
 raphael
 raphaelin
+sendTG "[Flashable Vendors have been pushed](https://osdn.net/projects/baalajimaestrobuilds/storage/vendor/)"
