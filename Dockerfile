@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
-RUN apt install patchelf brotli unzip p7zip-full zip curl wget gpg python python-kerberos python3 python3-pip sudo -y
+RUN apt update && apt upgrade -y && apt install patchelf brotli unzip p7zip-full zip curl wget gpg python python-kerberos python3 python3-pip sudo -y
 RUN sudo pip3 install requests pyYaml
 RUN sudo echo "ci ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN useradd -m -d /home/ci ci
