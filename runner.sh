@@ -74,3 +74,10 @@ raphaelin()
   python3 get_rom.py raphaelin
   create_flashable_zip raphael
 }
+
+ssh_keys
+build_env
+davinci
+davinciin
+raphael
+raphaelin
