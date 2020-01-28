@@ -1,8 +1,10 @@
 #! /bin/bash
+#
+# Copyright © 2019 Maestro Creativescape
+#
+# SPDX-License-Identifier: GPL-3.0
+#
 # CI Runner Script for Generation of blobs
-
-# We need this directive
-# shellcheck disable=1090
 
 function sendTG() {
     curl -s "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendmessage" --data "text=${*}&chat_id=-1001427544283&disable_web_page_preview=true&parse_mode=Markdown" > /dev/null

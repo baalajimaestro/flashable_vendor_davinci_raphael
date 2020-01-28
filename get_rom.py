@@ -1,3 +1,9 @@
+#
+# Copyright © 2019 Maestro Creativescape
+#
+# SPDX-License-Identifier: GPL-3.0
+#
+
 from requests import get
 from datetime import datetime as dt
 import yaml
