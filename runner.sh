@@ -32,10 +32,15 @@ build_env() {
 push_flashable_zip()
 {
   python3 create_flashable_firmware.py -V rom.zip
+
   if [ "$1" == "davinci" ]; then
     mv fw-vendor* "fw-vendor_davinci-$2-$(cat /tmp/version).zip"
+    if [ "$2" == "EA" ]; then
+      sed -i 's/P/Q/g' /tmp/version
+    fi
   elif [ "$1" == "davinciin" ]; then
     mv fw-vendor* "fw-vendor_davinciin-$2-$(cat /tmp/version).zip"
+    sed -i 's/P/Q/g' /tmp/version
   elif [ "$1" == "raphaelin" ]; then
     mv fw-vendor* "fw-vendor_raphaelin-$2-$(cat /tmp/version).zip"
   elif [ "$1" == "raphael" ]; then

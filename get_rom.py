@@ -64,4 +64,8 @@ else:
     print("Fetching Stable ROM......")
 
 with open('rom.zip', 'wb') as load:
+    if sys.argv[1] == "davinciin":
+        URL="http://bigota.d.miui.com/V11.0.1.0.QFJINXM/miui_DAVINCIININGlobal_V11.0.1.0.QFJINXM_496d514f17_10.0.zip"
+    elif sys.argv[1] == "davinci" and edition == "EA":
+        URL="https://bigota.d.miui.com/V11.0.1.0.QFJEUXM/miui_DAVINCIEEAGlobal_V11.0.1.0.QFJEUXM_fd5b674cfd_10.0.zip"
     load.write(get(URL).content)
