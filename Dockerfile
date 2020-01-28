@@ -1,7 +1,6 @@
-FROM debian:buster-slim
+FROM baalajimaestro/android_build:latest
 
-RUN apt update && apt upgrade -y && apt install patchelf brotli unzip p7zip-full zip curl wget gpg python python-kerberos python3 python3-pip sudo -y
-RUN sudo pip3 install requests pyYaml
+RUN echo "**MaestroCI Flashable Vendor Extractor**"
 RUN sudo echo "ci ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN useradd -m -d /home/ci ci
 RUN useradd -g ci wheel
