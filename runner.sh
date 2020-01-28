@@ -27,11 +27,12 @@ push_flashable_zip()
 {
   python3 create_flashable_firmware.py -V rom.zip
   if [ "$1" == "davinci" ]; then
-  scp  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r miui* baalaji20@storage.osdn.net:/storage/groups/b/ba/baalajimaestrobuilds/vendor/davinci/
+  scp  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r fw-vendor_davinci* baalaji20@storage.osdn.net:/storage/groups/b/ba/baalajimaestrobuilds/vendor/davinci/
   else
-  scp  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r miui* baalaji20@storage.osdn.net:/storage/groups/b/ba/baalajimaestrobuilds/vendor/raphael/
+  scp  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r fw-vendor_raphael* baalaji20@storage.osdn.net:/storage/groups/b/ba/baalajimaestrobuilds/vendor/raphael/
   fi
   rm -rf rom.zip
+  rm -rf fw-vendor*
 }
 
 
