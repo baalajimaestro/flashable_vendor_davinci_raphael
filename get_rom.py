@@ -17,7 +17,7 @@ if edition == "EA":
 elif edition == "GB":
     array_index = 0
 elif edition =="IN":
-    array_index =0
+    array_index = 0
 
 with open(yaml_name, 'wb') as load:
     load.write(get("https://raw.githubusercontent.com/XiaomiFirmwareUpdater/xiaomifirmwareupdater.github.io/master/data/devices/latest/"+yaml_name).content)
@@ -56,7 +56,10 @@ else:
     URL+=version
     URL+="/"
     file=fw[array_index]["filename"]
-    file=file[11:]
+    if edition == "IN":
+        file=file[13:]
+    else:
+        file=file[11:]
     URL+=file
     print("Fetching Stable ROM......")
 
