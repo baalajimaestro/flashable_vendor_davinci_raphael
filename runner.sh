@@ -59,35 +59,35 @@ push_flashable_zip()
 davinci()
 {
    echo "davinci1"
-   python3.7 get_rom.py davinci EA
+   python3.8 get_rom.py davinci EA
    push_flashable_zip davinci EA
    echo "davinci2"
-   python3.7 get_rom.py davinci CN
+   python3.8 get_rom.py davinci CN
    push_flashable_zip davinci CN
    echo "davinci3"
-   python3.7 get_rom.py davinci GB
+   python3.8 get_rom.py davinci GB
    push_flashable_zip davinci GB
 }
 
 davinciin()
 {
-  python3.7 get_rom.py davinciin IN
+  python3.8 get_rom.py davinciin IN
   push_flashable_zip davinciin IN
 }
 
 raphael()
 {
-  python3.7 get_rom.py raphael EA
+  python3.8 get_rom.py raphael EA
   push_flashable_zip raphael EA
-  python3.7 get_rom.py raphael CN
+  python3.8 get_rom.py raphael CN
   push_flashable_zip raphael CN
-  python3.7 get_rom.py raphael GB
+  python3.8 get_rom.py raphael GB
   push_flashable_zip raphael GB
 }
 
 raphaelin()
 {
-  python3.7 get_rom.py raphaelin IN
+  python3.8 get_rom.py raphaelin IN
   push_flashable_zip raphaelin IN
 }
 
