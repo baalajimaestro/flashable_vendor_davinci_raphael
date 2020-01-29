@@ -9,6 +9,8 @@ from datetime import datetime as dt
 import yaml
 import sys
 
+print("DOCKER HAI")
+
 yaml_name = sys.argv[1]+".yml"
 edition = sys.argv[2]
 

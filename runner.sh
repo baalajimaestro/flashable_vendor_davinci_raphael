@@ -58,10 +58,13 @@ push_flashable_zip()
 
 davinci()
 {
+   echo "davinci1"
    python3 get_rom.py davinci EA
    push_flashable_zip davinci EA
+   echo "davinci2"
    python3 get_rom.py davinci CN
    push_flashable_zip davinci CN
+   echo "davinci3"
    python3 get_rom.py davinci GB
    push_flashable_zip davinci GB
 }
