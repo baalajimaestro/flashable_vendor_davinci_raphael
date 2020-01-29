@@ -28,8 +28,9 @@ if edition == "CN":
     if stable_date > weekly_date:
         URL="https://bigota.d.miui.com/"
         version=fw[1]["versions"]["miui"]
-        with open('/tmp/version','wb') as load:
-            load.write(str.encode(version))
+        if sys.platform != 'win32':
+            with open('/tmp/version','wb') as load:
+                load.write(str.encode(version))
         URL+=version
         URL+="/"
         file=fw[1]["filename"]
@@ -40,8 +41,9 @@ if edition == "CN":
         if edition == "CN":
             URL="https://bigota.d.miui.com/"
             version=fw[2]["versions"]["miui"]
-            with open('/tmp/version','wb') as load:
-                load.write(str.encode(version))
+            if sys.platform != 'win32':
+                with open('/tmp/version','wb') as load:
+                    load.write(str.encode(version))
             URL+=version
             URL+="/"
             file=fw[2]["filename"]
@@ -51,8 +53,9 @@ if edition == "CN":
 else:
     URL="https://bigota.d.miui.com/"
     version=fw[array_index]["versions"]["miui"]
-    with open('/tmp/version','wb') as load:
-        load.write(str.encode(version))
+    if sys.platform != 'win32':
+        with open('/tmp/version','wb') as load:
+            load.write(str.encode(version))
     URL+=version
     URL+="/"
     file=fw[array_index]["filename"]
